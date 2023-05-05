@@ -190,7 +190,7 @@ nav a {
 }
 
 nav:hover {
-    background-color: rgb(248, 204, 168);
+    background-color: rgb(168, 176, 248);
     box-shadow: 0 5px 8px 2px hsla(210, 11%, 45%, 0.932);
 }
 
@@ -247,4 +247,8 @@ a {
     height: 500px;
     margin-left: 25px;
 
+}
+
+a:hover {
+    background-color: #d8e1f8;
 }
