@@ -128,8 +128,8 @@ p {
 
 
 .image {
-    padding: 15px;
-    margin: 15px;
+    padding: 7px;
+    margin: 14px 14px;
 }
 
 
@@ -251,4 +251,8 @@ a {
 
 a:hover {
     background-color: #d8e1f8;
+}
+
+p3 {
+    margin-left: 25px;
 }
