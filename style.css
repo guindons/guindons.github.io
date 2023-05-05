@@ -51,23 +51,8 @@ p {
 }
 
 
-@keyframes bg-color-animation {
-    25% {
-        background-color: rgb(255, 255, 255);
-    }
 
-    50% {
-        background-color: rgb(255, 255, 255);
-    }
 
-    75% {
-        background-color: rgb(255, 255, 255);
-    }
-
-    100% {
-        background-color: rgb(255, 255, 255);
-    }
-}
 
 .iceblue-text {
     color: rgb(24, 47, 70);
@@ -242,8 +227,9 @@ p1 {
 
 p2 {
     color: azure;
-    padding: 100px 200px;
-    margin-top: 200px;
-    margin-right: 25px;
-    margin-left: 25px;
+
+}
+
+body {
+    background-color: rgb(245, 226, 204);
 }
