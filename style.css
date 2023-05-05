@@ -1,7 +1,9 @@
+/* styling borders */
 h1 {
-    color: rgb(125, 166, 207);
+    transition: all 0.3s;
+    color: rgb(24, 47, 70);
     font-size: 28px;
-    font-style: italic;
+    font-style: normal;
     font-family: 'Courier New', Courier, monospace;
     border-width: 6px;
     border-color: rgb(54, 54, 85);
@@ -10,45 +12,238 @@ h1 {
     text-align: center;
     box-shadow: 0 5px 8px 2px blue(83, 83, 83, 0.1);
     padding: 13px;
-    margin: 17px;
+    margin: 25px;
 }
 
+input {
+    margin-top: 20px;
+    border-style: solid;
+    border-color: rgb(54, 54, 85);
+    border-width: 2px;
+
+    border-radius: 20px;
+    padding: 6px;
+}
 
 .purple-text {
-    color: rgb(125, 166, 207);
+    color: rgb(54, 54, 85);
     font-size: 21px;
 }
 
+h1:hover {
+    background-color: rgb(248, 204, 168);
+    box-shadow: 0 5px 8px 2px hsla(210, 11%, 45%, 0.932);
+}
+
+/* styling borders  */
 p {
-    border-width: 4px;
-    border-color: 54, 54, 85;
-    border-style: solid;
-    border-radius: 4px;
-    text-align: center;
-    box-shadow: 0 5px 8px 2px blue(83, 83, 83, 0.1);
-    padding: 13px;
-    margin: 17px;
-}
-
-.iceblue-text {
-    color: rgb(125, 166, 207);
-    font-size: 16px;
-}
 
 
-
-.small-font {
-    font-size: 12px;
-}
-
-section {
+    transition: all 0.3s;
     border-width: 6px;
     border-color: rgb(54, 54, 85);
     border-style: solid;
     border-radius: 6px;
     text-align: center;
-
     box-shadow: 0 5px 8px 2px blue(83, 83, 83, 0.1);
     padding: 13px;
-    margin: 17px;
+    margin: 25px;
+}
+
+
+@keyframes bg-color-animation {
+    25% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    50% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    75% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.iceblue-text {
+    color: rgb(24, 47, 70);
+    font-size: 16px;
+
+}
+
+.myForm {
+    background: linear-gradient(-45deg, #f38484, #ecc791, #f1736a, #f3a79d);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    width: 770px;
+    height: 200px;
+    padding: 10px;
+    margin-left: 20px;
+
+
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgb(54, 54, 85);
+    border-radius: 6px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+
+}
+
+.small-font {
+    font-size: 12px;
+}
+
+/* styling borders */
+section {
+    transition: all 0.3s;
+    border-width: 6px;
+    border-color: rgb(54, 67, 94);
+    border-style: solid;
+    border-radius: 6px;
+
+    padding: 20px;
+    margin: 20px;
+    margin-right: 20px;
+}
+
+p:hover {
+    background-color: rgb(248, 204, 168);
+    box-shadow: 0 5px 8px 2px hsla(210, 11%, 45%, 0.932);
+    ;
+}
+
+section:hover {
+    background-color: rgb(248, 204, 168);
+    box-shadow: 0 5px 8px 2px hsla(210, 11%, 45%, 0.932);
+}
+
+
+p {
+    animation-name: bg-color-animation;
+    animation-duration: 3s;
+}
+
+
+.image {
+    padding: 15px;
+    margin: 15px;
+}
+
+
+.user {
+    padding: 15px;
+    margin: 15px;
+}
+
+form:hover {
+    background-color: rgb(248, 204, 168);
+    box-shadow: 0 5px 8px 2px hsla(210, 11%, 45%, 0.932);
+    ;
+}
+
+form {
+    transition: all 0.3s;
+}
+
+input [type=submit] {
+    border-radius: 0px;
+}
+
+h4 {
+    margin-left: 25px;
+}
+
+.stories-section {
+    background-image: url("./ocean.jpg");
+    width: 750px;
+    height: 434px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+
+nav {
+    transition: all 0.3s;
+    border-width: 6px;
+    border-color: rgb(54, 54, 85);
+    border-style: solid;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 5px 8px 2px blue(83, 83, 83, 0.1);
+    padding: 13px;
+    margin: 25px;
+}
+
+a {
+    margin: 10px;
+    font-size: medium;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 29px;
+}
+
+nav:hover {
+    background-color: rgb(248, 204, 168);
+    box-shadow: 0 5px 8px 2px hsla(210, 11%, 45%, 0.932);
+}
+
+
+.joke {
+    border: solid 6px rgb(54, 54, 85);
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 25px;
+    border-radius: 6px;
+}
+
+.link {
+    border: solid 6px rgb(54, 54, 85);
+    padding: 10px 200px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 25px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+p1 {
+    border: solid 6px rgb(54, 54, 85);
+    padding: 10px 200px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 25px;
+    margin-bottom: 200px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+p2 {
+    color: azure;
+    padding: 100px 200px;
+    margin-top: 200px;
+    margin-right: 25px;
+    margin-left: 25px;
 }

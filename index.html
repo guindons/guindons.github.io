@@ -6,40 +6,175 @@
     <title> Tutorials point </title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+
+
+    <nav>
+
+        <a href="./index.html"><i class="fa fa-home"></i>Home</a>
+        <a href="./contact.html"><i class="fa fa-phone"></i>Contact</a>
+
+    </nav>
+
+
     <header role="banner">
-        <h1>Learn about</h1>
+        <h1>Read more to learn about Sam!</h1>
 
     </header>
 
     <div class="main-content" data-test="hi">
 
-        <h1 class="purple-text">Hello and welcome to this webiste. This page will tell you more about
+        <h1 draggable="true" class="purple-text">Hello and welcome to this webiste. This page is a
+            test website coded by
             Samantha Guindon</h1>
 
-        <p> Intro/Biographie</p>
-        <section class="iceblue-text"> I'm in grade 8 and currently attending Holy Trinity Catholic High School.
+        <p ondblclick="myFunction()"> Intro/Biographie</p>
+
+
+        <section class="iceblue-text" id="intro"> I'm in grade 8 and currently attending Holy Trinity Catholic High
+            School.
             Outside of school on my own time I play volleyball and softball, (i am not currently on a team for those
-            sports yet.) I also do horseback riding, at lone wolf farm. My sister and I are currently leasing a large I
-            have lived in Ottawa for around 2 years before I lived in Petawawa
+            sports yet.) I also do horseback riding, at lone wolf farm. My sister and I are currently leasing a large
+            pony. I have lived in Ottawa for around 2 years before I lived in Petawawa for 4 years. I have gone back and
+            forth between Petawawa and Ottawa, but now will stay in Ottawa.
         </section>
 
-        <img src="profile.webp" height="200">
+        <img class="image" src="profile.webp" height="200">
 
-        <video controls height="200">
+        <video class="image" controls height="200">
             <source src="Sunset.mp4" type="video/mp4">
         </video>
 
-        <a href="https://www.google.com/"> link to google </a>
+
     </div>
+
+    <h4>User Details Form</h4>
+    <form class="myForm" id="myForm">
+
+        <label for="first-name"> First Name </label>
+        <input type="text" name="first-name" id="first-name" placeholder="ex, samantha">
+
+        <br>
+
+        <label for="email"> Email </label>
+        <input type="email" name="email" id="email" placeholder="ex, samantha@gmail.com">
+
+        <br>
+
+        <label for="birthday"> Birthday </label>
+        <input type="date" name="birthday" id="birthday">
+
+        <br>
+
+        <input type="submit" value="Submit This Form">
+    </form>
+
+    <!-- Background Image -->
+    <section class="stories-section">
+        <h1>My stories</h1>
+        <p1> Horseback Riding</p1>
+        <br>
+        <br>
+        <br>
+        <p2> I started riding when I was 9, in 2019. I started riding at a barn named "Canyon Creek Farm," and stayed
+            there for around a year-year and a half. After I stopped ridin there I swithed to a barn called "Slow Horse
+            Farm." When I got there I really like it and started to "lease a horse, Jack. I started bringing him to
+            competitions and competed with him for 2 seasons. During our last season, we placed all firsts in our jumer
+            show and two second places in western games.</p2>
+
+    </section>
+
+    <h1 class="joke"> Joke Generator : </h1>
+    <div id="jokes" class="joke">
+        hey there this is a joke
+    </div>
+    <button class="joke" onclick="generateJoke()"> Generate a Joke</button>
+
+
 
     <footer>
         <p> Created by <a href="http://tutorials[point.com//]"> Tutorials Point </a></p>
         </a> </p>
     </footer>
+    <script>
+
+        var first_name = "Samantha";
+        var last_name = "Guindon;"
+
+        function calculateSum(firstNumber, secondNumber) {
+            var sumOfTwoNumbers = firstNumber + secondNumber;
+
+            return sumOfTwoNumbers;
+        }
+
+        var sum = calculateSum(5, 10);
+        console.log("Sum of two nums", sum)
+
+
+
+        var thisIsANumber = "😃";
+        console.log(thisIsANumber);
+
+
+        function myFunction() {
+            var funnyEmoji = "😃";
+            console.log(funnyEmoji);
+
+            alert("Hey please don't click")
+        }
+
+
+
+
+        function changeName(customText) {
+            document.getElementById("intro").innerHTML = "Hey Samantha Here"
+        }
+
+        document.getElementById("myForm").addEventListener("submit", handleFormSubmit)
+
+
+
+
+        function handleFormSubmit(event) {
+            event.preventDefault()
+
+            var name = document.getElementById("first-name").value;
+            var email = document.getElementById("email").value;
+            var birthday = document.getElementById("birthday").value;
+            console.log(name)
+            console.log(email)
+            console.log(birthday)
+
+            document.getElementById("intro").innerHTML = name
+
+
+        }
+
+
+
+        //joke generator stuff// 
+        var jokesArray = [
+            "What’s the best thing about Switzerland? I don’t know, but the flag is a big plus.", "Why do we tell actors to “break a leg?” Because every play has a cast.",
+            "Why couldn't the sunflower ride it's bike? Because it lost it's petal.", "Did you hear about the claustrophobic astronaut? He just needed a little space.",
+            "Why don’t scientists trust atoms? Because they make up everything.", "What does a nosy pepper do? Gets jalapeño business!",
+            "Why does Humpty Dumpty love autumum? Because he had a great fall!"];
+
+        function generateJoke() {
+            var randomNumber = Math.random() * 5;
+
+            var randomInteger = Math.floor(randomNumber);
+
+            var randomJoke = jokesArray[randomInteger];
+
+            document.getElementById("jokes").innerHTML = randomJoke;
+        }
+    </script>
 
     <body>
+
+
 
 </html>
